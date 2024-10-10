@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body class="bg-gray-100">
+
+    <div class="calculator max-w-xs mx-auto mt-10 p-5 bg-white shadow-lg rounded-lg">
+        <label id="displayLabel" for="display" class="block text-lg font-semibold mb-2">Calculator Display:</label>
+        <input type="text" id="display" aria-labelledby="displayLabel" readonly class="w-full h-12 mb-4 text-right text-lg border border-gray-300 rounded">
+
+        <div class="grid grid-cols-4 gap-2">
+            <button class="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600">7</button>
+            <button class="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600">8</button>
+            <button class="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600">9</button>
+            <button class="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600">/</button>
+            <button class="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600">4</button>
+            <button class="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600">5</button>
+            <button class="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600">6</button>
+            <button class="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600">*</button>
+            <button class="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600">1</button>
+            <button class="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600">2</button>
+            <button class="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600">3</button>
+            <button class="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600">-</button>
+            <button class="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600">0</button>
+            <button class="bg-red-500 text-white py-2 px-4 rounded hover:bg-red-600">C</button>
+            <button class="bg-green-500 text-white py-2 px-4 rounded hover:bg-green-600">=</button>
+            <button class="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600">+</button>
+            <button id="clearHistory" class="bg-gray-500 text-white py-2 px-4 rounded hover:bg-gray-600 col-span-4">Clear History</button>
+        </div>
+    </div>
+
+    <div class="max-w-xs mx-auto mt-5">
+        <label for="themeSelect" class="block mb-2">Select Theme:</label>
+        <select id="themeSelect" class="border border-gray-300 rounded p-2">
+            <option value="light-theme">Light</option>
+            <option value="dark-theme">Dark</option>
+            <option value="desert-theme">Desert</option>
+            <option value="jungle-theme">Jungle</option>
+        </select>
+    </div>
+
+    <div class="max-w-xs mx-auto mt-5">
+        <h3 class="text-lg font-semibold">Calculation History:</h3>
+        <div id="historyDisplay" class="border border-gray-300 p-2 h-32 overflow-y-auto"></div>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+</html>
